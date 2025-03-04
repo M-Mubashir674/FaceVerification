@@ -47,7 +47,7 @@ const FaceVerificationComponent = () => {
             setIsModelLoaded(true);
 
             // Load reference image (replace with your reference image)
-            const referenceImage = await faceapi.fetchImage('/irfan_malik.jpg');
+            const referenceImage = await faceapi.fetchImage('/referenceImage.jpg');
             const referenceDetection = await faceapi
                 .detectSingleFace(referenceImage, new faceapi.TinyFaceDetectorOptions())
                 .withFaceLandmarks()
