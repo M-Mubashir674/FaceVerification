@@ -92,10 +92,18 @@ function FaceVerificationComponent() {
       color: "#FF0000",
       lineWidth: 2,
     });
-    drawConnectors(canvasCtx, results.poseLandmarks, POSE_CONNECTIONS, {
+
+    const cutdownConnections = POSE_CONNECTIONS.slice(9, 12).concat(
+      POSE_CONNECTIONS.slice(16, 18),
+    );
+
+    drawConnectors(canvasCtx, results.poseLandmarks, cutdownConnections, {
       color: "#00FF00",
     });
-    drawLandmarks(canvasCtx, results.poseLandmarks, {
+
+    const cutDownlandmarks = results.poseLandmarks.slice(11, 17);
+
+    drawLandmarks(canvasCtx, cutDownlandmarks, {
       color: "#00FF00",
       fillColor: "#FF0000",
     });
