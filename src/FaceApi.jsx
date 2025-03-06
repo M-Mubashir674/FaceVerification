@@ -112,18 +112,36 @@ const FaceVerificationComponent1 = () => {
   }, [isModelLoaded, referenceDescriptor]);
 
   return (
-    <div>
-      <div style={{ position: "relative" }}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
+      <div style={{ position: "relative", width: "640px", height: "480px" }}>
         <Webcam
           ref={webcamRef}
-          style={{ width: "640px", height: "480px" }}
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "640px",
+            height: "480px",
+          }}
           screenshotFormat="image/jpeg"
         />
         <canvas
           ref={canvasRef}
           width={640}
           height={480}
-          style={{ position: "absolute", top: 0, left: 0 }}
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "640px",
+            height: "480px",
+          }}
         />
       </div>
 

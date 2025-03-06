@@ -147,7 +147,7 @@ function FaceVerificationComponent() {
     }
   }, []);
   return (
-    <div className="App">
+    <>
       <Webcam
         ref={webcamRef}
         style={{
@@ -156,10 +156,6 @@ function FaceVerificationComponent() {
           marginRight: "auto",
           left: 0,
           right: 0,
-          textAlign: "center",
-          zIndex: 9,
-          width: 1200,
-          height: 800,
         }}
       />
       <canvas
@@ -170,13 +166,9 @@ function FaceVerificationComponent() {
           marginRight: "auto",
           left: 0,
           right: 0,
-          textAlign: "center",
-          zIndex: 9,
-          width: 1200,
-          height: 800,
         }}
       />
-    </div>
+    </>
   );
 }
 
